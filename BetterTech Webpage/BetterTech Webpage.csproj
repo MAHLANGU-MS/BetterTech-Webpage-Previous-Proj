@@ -1,0 +1,730 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A2F1925-A3E7-4332-BF41-605C327672A3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BetterTech_Webpage</RootNamespace>
+    <AssemblyName>BetterTech Webpage</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="addQuantity.aspx" />
+    <Content Include="addToCart.aspx" />
+    <Content Include="AdminEditDetails.aspx" />
+    <Content Include="App_Media\Brand_AMD.jpg" />
+    <Content Include="App_Media\Brand_Antec.jpg" />
+    <Content Include="App_Media\Brand_Asus.jpg" />
+    <Content Include="App_Media\Brand_Ballistix.jpg" />
+    <Content Include="App_Media\Brand_Bitfenix.jpg" />
+    <Content Include="App_Media\Brand_CoolerMaster.jpg" />
+    <Content Include="App_Media\Brand_Corsair.jpg" />
+    <Content Include="App_Media\Brand_EKWB.jpg" />
+    <Content Include="App_Media\Brand_FractalDesign.jpg" />
+    <Content Include="App_Media\Brand_Galax.jpg" />
+    <Content Include="App_Media\Brand_Gigabyte.jpg" />
+    <Content Include="App_Media\Brand_HP.png" />
+    <Content Include="App_Media\Brand_HyperX.jpg" />
+    <Content Include="App_Media\Brand_Intel.jpg" />
+    <Content Include="App_Media\Brand_Kingston.jpg" />
+    <Content Include="App_Media\Brand_MSI.jpg" />
+    <Content Include="App_Media\Brand_Mushkin.jpg" />
+    <Content Include="App_Media\Brand_Pallit.jpg" />
+    <Content Include="App_Media\Brand_Phanteks.jpg" />
+    <Content Include="App_Media\Brand_Raidmax.jpg" />
+    <Content Include="App_Media\Brand_Reeven.jpg" />
+    <Content Include="App_Media\Brand_Samsung.jpg" />
+    <Content Include="App_Media\Brand_Seagate.jpg" />
+    <Content Include="App_Media\Brand_Thermaltake.jpg" />
+    <Content Include="App_Media\Brand_WD.jpg" />
+    <Content Include="App_Media\Brand_WesternDigital.jpg" />
+    <Content Include="App_Media\Developers\Akshar_crop.jpg" />
+    <Content Include="App_Media\Developers\Brand_Asrock.jpg" />
+    <Content Include="App_Media\Developers\Brij_crop.jpg" />
+    <Content Include="App_Media\Developers\Jen_crop.jpg" />
+    <Content Include="App_Media\Developers\Chris_crop.jpg" />
+    <Content Include="AdminHomePage.aspx" />
+    <Content Include="App_Data\BetterTech_DB.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Data\BetterTech_DB_log.ldf">
+      <DependentUpon>BetterTech_DB.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Media\logo.jpg" />
+    <Content Include="App_Media\Prodcut_Id355.jpg" />
+    <Content Include="App_Media\Prodcut_Id359 - Copy.jpg" />
+    <Content Include="App_Media\Prodcut_Id359.jpg" />
+    <Content Include="App_Media\Product\Brand_AMD.jpg" />
+    <Content Include="App_Media\Product\Brand_Antec.jpg" />
+    <Content Include="App_Media\Product\Brand_Asrock.jpg" />
+    <Content Include="App_Media\Product\Brand_Asus.jpg" />
+    <Content Include="App_Media\Product\Brand_Ballistix.jpg" />
+    <Content Include="App_Media\Product\Brand_Bitfenix.jpg" />
+    <Content Include="App_Media\Product\Brand_Cooler Master.jpg" />
+    <Content Include="App_Media\Product\Brand_Corsair.jpg" />
+    <Content Include="App_Media\Product\Brand_EKWB.jpg" />
+    <Content Include="App_Media\Product\Brand_Fractal Design.jpg" />
+    <Content Include="App_Media\Product\Brand_Galax.jpg" />
+    <Content Include="App_Media\Product\Brand_Gigabyte.jpg" />
+    <Content Include="App_Media\Product\Brand_Intel.jpg" />
+    <Content Include="App_Media\Product\Brand_Kingston.jpg" />
+    <Content Include="App_Media\Product\Brand_MSI.jpg" />
+    <Content Include="App_Media\Product\Brand_Palit.jpg" />
+    <Content Include="App_Media\Product\Brand_Pallit.jpg" />
+    <Content Include="App_Media\Product\Brand_Phanteks.jpg" />
+    <Content Include="App_Media\Product\Brand_Raidmax.jpg" />
+    <Content Include="App_Media\Product\Brand_Reeven.jpg" />
+    <Content Include="App_Media\Product\Brand_Samsung.jpg" />
+    <Content Include="App_Media\Product\Brand_Seagate.jpg" />
+    <Content Include="App_Media\Product\Brand_Thermaltake.jpg" />
+    <Content Include="App_Media\Product\Brand_WD.jpg" />
+    <Content Include="App_Media\Product\Brand_Western Digital.jpg" />
+    <Content Include="App_Media\Product\logo.jpg" />
+    <Content Include="App_Media\Product\Prodcut_Id359.jpg" />
+    <Content Include="App_Media\Product\Product_Id229.jpg" />
+    <Content Include="App_Media\Product\Product_Id230.jpg" />
+    <Content Include="App_Media\Product\Product_Id231.jpg" />
+    <Content Include="App_Media\Product\Product_Id232.jpg" />
+    <Content Include="App_Media\Product\Product_Id1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="App_Media\Product\Product_Id224.jpg" />
+    <Content Include="App_Media\Product\Product_Id225.jpg" />
+    <Content Include="App_Media\Product\Product_Id233.jpg" />
+    <Content Include="App_Media\Product\Product_Id234.jpg" />
+    <Content Include="App_Media\Product\Product_id235.jpg" />
+    <Content Include="App_Media\Product\Product_id236.jpg" />
+    <Content Include="App_Media\Product\Product_id237.jpg" />
+    <Content Include="App_Media\Product\Product_Id238.jpg" />
+    <Content Include="App_Media\Product\Product_Id239.jpg" />
+    <Content Include="App_Media\Product\Product_Id240.jpg" />
+    <Content Include="App_Media\Product\Product_Id241.jpg" />
+    <Content Include="App_Media\Product\Product_Id242.jpg" />
+    <Content Include="App_Media\Product\Product_Id243.jpg" />
+    <Content Include="App_Media\Product\Product_Id244.jpg" />
+    <Content Include="App_Media\Product\Product_Id245.jpg" />
+    <Content Include="App_Media\Product\Product_Id246.jpg" />
+    <Content Include="App_Media\Product\Product_Id247.jpg" />
+    <Content Include="App_Media\Product\Product_Id248.jpg" />
+    <Content Include="App_Media\Product\Product_Id249.jpg" />
+    <Content Include="App_Media\Product\Product_Id250.jpg" />
+    <Content Include="App_Media\Product\Product_Id251.jpg" />
+    <Content Include="App_Media\Product\Product_Id252.jpg" />
+    <Content Include="App_Media\Product\Product_Id253.jpg" />
+    <Content Include="App_Media\Product\Product_Id254.jpg" />
+    <Content Include="App_Media\Product\Product_Id255.jpg" />
+    <Content Include="App_Media\Product\Product_Id256.jpg" />
+    <Content Include="App_Media\Product\Product_Id257.jpg" />
+    <Content Include="App_Media\Product\Product_Id258.jpg" />
+    <Content Include="App_Media\Product\Product_Id259.jpg" />
+    <Content Include="App_Media\Product\Product_Id260.jpg" />
+    <Content Include="App_Media\Product\Product_Id261.jpg" />
+    <Content Include="App_Media\Product\Product_Id262.jpg" />
+    <Content Include="App_Media\Product\Product_Id263.jpg" />
+    <Content Include="App_Media\Product\Product_Id264.jpg" />
+    <Content Include="App_Media\Product\Product_Id265.jpg" />
+    <Content Include="App_Media\Product\Product_Id266.jpg" />
+    <Content Include="App_Media\Product\Product_Id267.jpg" />
+    <Content Include="App_Media\Product\Product_Id268.jpg" />
+    <Content Include="App_Media\Product\Product_Id269.jpg" />
+    <Content Include="App_Media\Product\Product_Id270.jpg" />
+    <Content Include="App_Media\Product\Product_Id271.jpg" />
+    <Content Include="App_Media\Product\Product_Id272.jpg" />
+    <Content Include="App_Media\Product\Product_Id274.jpg" />
+    <Content Include="App_Media\Product\Product_Id275.jpg" />
+    <Content Include="App_Media\Product\Product_Id276.jpg" />
+    <Content Include="App_Media\Product\Product_Id277.jpg" />
+    <Content Include="App_Media\Product\Product_Id278.jpg" />
+    <Content Include="App_Media\Product\Product_Id279.jpg" />
+    <Content Include="App_Media\Product\Product_Id280.jpg" />
+    <Content Include="App_Media\Product\Product_Id281.jpg" />
+    <Content Include="App_Media\Product\Product_Id282.jpg" />
+    <Content Include="App_Media\Product\Product_Id283.jpg" />
+    <Content Include="App_Media\Product\Product_Id284.jpg" />
+    <Content Include="App_Media\Product\Product_Id285.jpg" />
+    <Content Include="App_Media\Product\Product_Id286.jpg" />
+    <Content Include="App_Media\Product\Product_Id287.jpg" />
+    <Content Include="App_Media\Product\Product_Id288.jpg" />
+    <Content Include="App_Media\Product\Product_Id289.jpg" />
+    <Content Include="App_Media\Product\Product_Id290.jpg" />
+    <Content Include="App_Media\Product\Product_Id291.jpg" />
+    <Content Include="App_Media\Product\Product_Id292.jpg" />
+    <Content Include="App_Media\Product\Product_Id293.jpg" />
+    <Content Include="App_Media\Product\Product_Id294.jpg" />
+    <Content Include="App_Media\Product\Product_Id295.jpg" />
+    <Content Include="App_Media\Product\Product_Id296.jpg" />
+    <Content Include="App_Media\Product\Product_Id297.jpg" />
+    <Content Include="App_Media\Product\Product_Id298.jpg" />
+    <Content Include="App_Media\Product\Product_Id299.jpg" />
+    <Content Include="App_Media\Product\Product_Id300.jpg" />
+    <Content Include="App_Media\Product\Product_Id301.jpg" />
+    <Content Include="App_Media\Product\Product_Id302.jpg" />
+    <Content Include="App_Media\Product\Product_Id303.jpg" />
+    <Content Include="App_Media\Product\Product_Id304.jpg" />
+    <Content Include="App_Media\Product\Product_Id305.jpg" />
+    <Content Include="App_Media\Product\Product_id306.jpg" />
+    <Content Include="App_Media\Product\Product_Id307.jpg" />
+    <Content Include="App_Media\Product\Product_Id308.jpg" />
+    <Content Include="App_Media\Product\Product_Id309.jpg" />
+    <Content Include="App_Media\Product\Product_Id310.jpg" />
+    <Content Include="App_Media\Product\Product_Id311.jpg" />
+    <Content Include="App_Media\Product\Product_Id312.jpg" />
+    <Content Include="App_Media\Product\Product_Id313.jpg" />
+    <Content Include="App_Media\Product\Product_Id314.jpg" />
+    <Content Include="App_Media\Product\Product_Id315.jpg" />
+    <Content Include="App_Media\Product\Product_Id316.jpg" />
+    <Content Include="App_Media\Product\Product_Id317.jpg" />
+    <Content Include="App_Media\Product\Product_Id318.jpg" />
+    <Content Include="App_Media\Product\Product_Id319.jpg" />
+    <Content Include="App_Media\Product\Product_Id320.jpg" />
+    <Content Include="App_Media\Product\Product_Id321.jpg" />
+    <Content Include="App_Media\Product\Product_Id323.jpg" />
+    <Content Include="App_Media\Product\Product_Id324.jpg" />
+    <Content Include="App_Media\Product\Product_Id325.jpg" />
+    <Content Include="App_Media\Product\Product_Id326.jpg" />
+    <Content Include="App_Media\Product\Product_Id327.jpg" />
+    <Content Include="App_Media\Product\Product_Id328.jpg" />
+    <Content Include="App_Media\Product\Product_Id329.jpg" />
+    <Content Include="App_Media\Product\Product_Id330.jpg" />
+    <Content Include="App_Media\Product\Product_Id331.jpg" />
+    <Content Include="App_Media\Product\Product_Id332.jpg" />
+    <Content Include="App_Media\Product\Product_Id333.jpg" />
+    <Content Include="App_Media\Product\Product_Id334.jpg" />
+    <Content Include="App_Media\Product\Product_Id335.jpg" />
+    <Content Include="App_Media\Product\Product_Id336.jpg" />
+    <Content Include="App_Media\Product\Product_Id337.jpg" />
+    <Content Include="App_Media\Product\Product_Id338.jpg" />
+    <Content Include="App_Media\Product\Product_Id339.jpg" />
+    <Content Include="App_Media\Product\Product_Id340.jpg" />
+    <Content Include="App_Media\Product\Product_Id341.jpg" />
+    <Content Include="App_Media\Product\Product_Id4.jpg" />
+    <Content Include="App_Media\Product\Product_Id5.jpg" />
+    <Content Include="App_Media\Product\Product_Id352.jpg" />
+    <Content Include="App_Media\Product_268.jpg" />
+    <Content Include="App_Media\Product_349.jpg" />
+    <Content Include="App_Media\Product_350.jpg" />
+    <Content Include="App_Media\Product_Id1.jpg" />
+    <Content Include="App_Media\Product_Id224.jpg" />
+    <Content Include="App_Media\Product_Id225.jpg" />
+    <Content Include="App_Media\Product_Id229.jpg" />
+    <Content Include="App_Media\Product_Id230.jpg" />
+    <Content Include="App_Media\Product_Id231.jpg" />
+    <Content Include="App_Media\Product_Id232.jpg" />
+    <Content Include="App_Media\Product_Id233.jpg" />
+    <Content Include="App_Media\Product_Id234.jpg" />
+    <Content Include="App_Media\Product_id235.jpg" />
+    <Content Include="App_Media\Product_id236.jpg" />
+    <Content Include="App_Media\Product_id237.jpg" />
+    <Content Include="App_Media\Product_Id238.jpg" />
+    <Content Include="App_Media\Product_Id239.jpg" />
+    <Content Include="App_Media\Product_Id240.jpg" />
+    <Content Include="App_Media\Product_Id241.jpg" />
+    <Content Include="App_Media\Product_Id242.jpg" />
+    <Content Include="App_Media\Product_Id243.jpg" />
+    <Content Include="App_Media\Product_Id244.jpg" />
+    <Content Include="App_Media\Product_Id245.jpg" />
+    <Content Include="App_Media\Product_Id246.jpg" />
+    <Content Include="App_Media\Product_Id247.jpg" />
+    <Content Include="App_Media\Product_Id248.jpg" />
+    <Content Include="App_Media\Product_Id249.jpg" />
+    <Content Include="App_Media\Product_Id250.jpg" />
+    <Content Include="App_Media\Product_Id251.jpg" />
+    <Content Include="App_Media\Product_Id252.jpg" />
+    <Content Include="App_Media\Product_Id253.jpg" />
+    <Content Include="App_Media\Product_Id254.jpg" />
+    <Content Include="App_Media\Product_Id255.jpg" />
+    <Content Include="App_Media\Product_Id256.jpg" />
+    <Content Include="App_Media\Product_Id257.jpg" />
+    <Content Include="App_Media\Product_Id258.jpg" />
+    <Content Include="App_Media\Product_Id259.jpg" />
+    <Content Include="App_Media\Product_Id260.jpg" />
+    <Content Include="App_Media\Product_Id261.jpg" />
+    <Content Include="App_Media\Product_Id262.jpg" />
+    <Content Include="App_Media\Product_Id263.jpg" />
+    <Content Include="App_Media\Product_Id264.jpg" />
+    <Content Include="App_Media\Product_Id265.jpg" />
+    <Content Include="App_Media\Product_Id266.jpg" />
+    <Content Include="App_Media\Product_Id267.jpg" />
+    <Content Include="App_Media\Product_Id268.jpg" />
+    <Content Include="App_Media\Product_Id269.jpg" />
+    <Content Include="App_Media\Product_Id270.jpg" />
+    <Content Include="App_Media\Product_Id271.jpg" />
+    <Content Include="App_Media\Product_Id272.jpg" />
+    <Content Include="App_Media\Product_Id274.jpg" />
+    <Content Include="App_Media\Product_Id275.jpg" />
+    <Content Include="App_Media\Product_Id276.jpg" />
+    <Content Include="App_Media\Product_Id277.jpg" />
+    <Content Include="App_Media\Product_Id278.jpg" />
+    <Content Include="App_Media\Product_Id279.jpg" />
+    <Content Include="App_Media\Product_Id280.jpg" />
+    <Content Include="App_Media\Product_Id281.jpg" />
+    <Content Include="App_Media\Product_Id282.jpg" />
+    <Content Include="App_Media\Product_Id283.jpg" />
+    <Content Include="App_Media\Product_Id284.jpg" />
+    <Content Include="App_Media\Product_Id285.jpg" />
+    <Content Include="App_Media\Product_Id286.jpg" />
+    <Content Include="App_Media\Product_Id287.jpg" />
+    <Content Include="App_Media\Product_Id288.jpg" />
+    <Content Include="App_Media\Product_Id289.jpg" />
+    <Content Include="App_Media\Product_Id290.jpg" />
+    <Content Include="App_Media\Product_Id291.jpg" />
+    <Content Include="App_Media\Product_Id292.jpg" />
+    <Content Include="App_Media\Product_Id293.jpg" />
+    <Content Include="App_Media\Product_Id294.jpg" />
+    <Content Include="App_Media\Product_Id295.jpg" />
+    <Content Include="App_Media\Product_Id296.jpg" />
+    <Content Include="App_Media\Product_Id297.jpg" />
+    <Content Include="App_Media\Product_Id298.jpg" />
+    <Content Include="App_Media\Product_Id299.jpg" />
+    <Content Include="App_Media\Product_Id300.jpg" />
+    <Content Include="App_Media\Product_Id301.jpg" />
+    <Content Include="App_Media\Product_Id302.jpg" />
+    <Content Include="App_Media\Product_Id303.jpg" />
+    <Content Include="App_Media\Product_Id304.jpg" />
+    <Content Include="App_Media\Product_Id305.jpg" />
+    <Content Include="App_Media\Product_id306.jpg" />
+    <Content Include="App_Media\Product_Id307.jpg" />
+    <Content Include="App_Media\Product_Id308.jpg" />
+    <Content Include="App_Media\Product_Id309.jpg" />
+    <Content Include="App_Media\Product_Id310.jpg" />
+    <Content Include="App_Media\Product_Id311.jpg" />
+    <Content Include="App_Media\Product_Id312.jpg" />
+    <Content Include="App_Media\Product_Id313.jpg" />
+    <Content Include="App_Media\Product_Id314.jpg" />
+    <Content Include="App_Media\Product_Id315.jpg" />
+    <Content Include="App_Media\Product_Id316.jpg" />
+    <Content Include="App_Media\Product_Id317.jpg" />
+    <Content Include="App_Media\Product_Id318.jpg" />
+    <Content Include="App_Media\Product_Id319.jpg" />
+    <Content Include="App_Media\Product_Id32.jpg" />
+    <Content Include="App_Media\Product_Id320.jpg" />
+    <Content Include="App_Media\Product_Id321.jpg" />
+    <Content Include="App_Media\Product_Id323.jpg" />
+    <Content Include="App_Media\Product_Id324.jpg" />
+    <Content Include="App_Media\Product_Id325.jpg" />
+    <Content Include="App_Media\Product_Id326.jpg" />
+    <Content Include="App_Media\Product_Id327.jpg" />
+    <Content Include="App_Media\Product_Id328.jpg" />
+    <Content Include="App_Media\Product_Id329.jpg" />
+    <Content Include="App_Media\Product_Id330.jpg" />
+    <Content Include="App_Media\Product_Id331.jpg" />
+    <Content Include="App_Media\Product_Id332.jpg" />
+    <Content Include="App_Media\Product_Id333.jpg" />
+    <Content Include="App_Media\Product_Id334.jpg" />
+    <Content Include="App_Media\Product_Id335.jpg" />
+    <Content Include="App_Media\Product_Id336.jpg" />
+    <Content Include="App_Media\Product_Id337.jpg" />
+    <Content Include="App_Media\Product_Id338.jpg" />
+    <Content Include="App_Media\Product_Id339.jpg" />
+    <Content Include="App_Media\Product_Id340.jpg" />
+    <Content Include="App_Media\Product_Id341.jpg" />
+    <Content Include="App_Media\Product_Id342.jpg" />
+    <Content Include="App_Media\Product_Id343.jpg" />
+    <Content Include="App_Media\Product_Id344.jpg" />
+    <Content Include="App_Media\Product_Id345.jpg" />
+    <Content Include="App_Media\Product_Id346.jpg" />
+    <Content Include="App_Media\Product_Id347.jpg" />
+    <Content Include="App_Media\Product_Id348.jpg" />
+    <Content Include="App_Media\Product_Id351.jpg" />
+    <Content Include="App_Media\Product_Id353.jpg" />
+    <Content Include="App_Media\Product_Id354.jpg" />
+    <Content Include="App_Media\Product_Id358.jpg" />
+    <Content Include="App_Media\Product_Id360.jpg" />
+    <Content Include="App_Media\Product_Id361.jpg" />
+    <Content Include="App_Media\Product_Id362.jpg" />
+    <Content Include="App_Media\Product_Id4.jpg" />
+    <Content Include="App_Media\Product_Id5.jpg" />
+    <Content Include="BuildCustomPC.aspx" />
+    <Content Include="CategoryPage.aspx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="close.aspx" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="About.aspx" />
+    <Content Include="Controlsingleproduct.aspx" />
+    <Content Include="ControlSpecials.aspx" />
+    <Content Include="CRUDProducts.aspx" />
+    <Content Include="App_Media\Developers\Akshar.jpg" />
+    <Content Include="App_Media\Developers\Chris.jpg" />
+    <Content Include="App_Media\Developers\Brij.jpg" />
+    <Content Include="App_Media\Developers\Jen.jpg" />
+    <Content Include="EditProductPage.aspx" />
+    <Content Include="Finalise.aspx" />
+    <Content Include="Index.aspx" />
+    <Content Include="minusQuantity.aspx" />
+    <Content Include="removeFromWishlist.aspx" />
+    <Content Include="UserAccountInfoPage.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="ProductPage.aspx" />
+    <Content Include="ReportGross.aspx" />
+    <Content Include="ReportNumProducts.aspx" />
+    <Content Include="ReportNumRegUsers.aspx" />
+    <Content Include="Reports.aspx" />
+    <Content Include="ReportSOH.aspx" />
+    <Content Include="SearchPage.aspx" />
+    <Content Include="TestPage.aspx" />
+    <Content Include="UserHomePage.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Wishlist.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addQuantity.aspx.cs">
+      <DependentUpon>addQuantity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addQuantity.aspx.designer.cs">
+      <DependentUpon>addQuantity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addToCart.aspx.cs">
+      <DependentUpon>addToCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addToCart.aspx.designer.cs">
+      <DependentUpon>addToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminEditDetails.aspx.cs">
+      <DependentUpon>AdminEditDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminEditDetails.aspx.designer.cs">
+      <DependentUpon>AdminEditDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHomePage.aspx.cs">
+      <DependentUpon>AdminHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHomePage.aspx.designer.cs">
+      <DependentUpon>AdminHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BetterTech.Master.cs">
+      <DependentUpon>BetterTech.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BetterTech.Master.designer.cs">
+      <DependentUpon>BetterTech.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BuildCustomPC.aspx.cs">
+      <DependentUpon>BuildCustomPC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuildCustomPC.aspx.designer.cs">
+      <DependentUpon>BuildCustomPC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryPage.aspx.cs">
+      <DependentUpon>CategoryPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CategoryPage.aspx.designer.cs">
+      <DependentUpon>CategoryPage.aspx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="close.aspx.cs">
+      <DependentUpon>close.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="close.aspx.designer.cs">
+      <DependentUpon>close.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controlsingleproduct.aspx.cs">
+      <DependentUpon>Controlsingleproduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controlsingleproduct.aspx.designer.cs">
+      <DependentUpon>Controlsingleproduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ControlSpecials.aspx.cs">
+      <DependentUpon>ControlSpecials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlSpecials.aspx.designer.cs">
+      <DependentUpon>ControlSpecials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CRUDProducts.aspx.cs">
+      <DependentUpon>CRUDProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CRUDProducts.aspx.designer.cs">
+      <DependentUpon>CRUDProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataLinq.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataLinq.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="EditProductPage.aspx.cs">
+      <DependentUpon>EditProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditProductPage.aspx.designer.cs">
+      <DependentUpon>EditProductPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Finalise.aspx.cs">
+      <DependentUpon>Finalise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Finalise.aspx.designer.cs">
+      <DependentUpon>Finalise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="minusQuantity.aspx.cs">
+      <DependentUpon>minusQuantity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="minusQuantity.aspx.designer.cs">
+      <DependentUpon>minusQuantity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="removeFromWishlist.aspx.cs">
+      <DependentUpon>removeFromWishlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="removeFromWishlist.aspx.designer.cs">
+      <DependentUpon>removeFromWishlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccountInfoPage.aspx.cs">
+      <DependentUpon>UserAccountInfoPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserAccountInfoPage.aspx.designer.cs">
+      <DependentUpon>UserAccountInfoPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPage.aspx.cs">
+      <DependentUpon>ProductPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductPage.aspx.designer.cs">
+      <DependentUpon>ProductPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ReportGross.aspx.cs">
+      <DependentUpon>ReportGross.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportGross.aspx.designer.cs">
+      <DependentUpon>ReportGross.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportNumProducts.aspx.cs">
+      <DependentUpon>ReportNumProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportNumProducts.aspx.designer.cs">
+      <DependentUpon>ReportNumProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportNumRegUsers.aspx.cs">
+      <DependentUpon>ReportNumRegUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportNumRegUsers.aspx.designer.cs">
+      <DependentUpon>ReportNumRegUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSOH.aspx.cs">
+      <DependentUpon>ReportSOH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportSOH.aspx.designer.cs">
+      <DependentUpon>ReportSOH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchPage.aspx.cs">
+      <DependentUpon>SearchPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchPage.aspx.designer.cs">
+      <DependentUpon>SearchPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Secrecy.cs" />
+    <Compile Include="TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserHomePage.aspx.cs">
+      <DependentUpon>UserHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserHomePage.aspx.designer.cs">
+      <DependentUpon>UserHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Wishlist.aspx.cs">
+      <DependentUpon>Wishlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Wishlist.aspx.designer.cs">
+      <DependentUpon>Wishlist.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BetterTech.Master" />
+    <Content Include="DataLinq.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataLinq.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="DataLinq.dbml.layout">
+      <DependentUpon>DataLinq.dbml</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51508</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51508/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.6.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
